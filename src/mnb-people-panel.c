@@ -288,8 +288,8 @@ _make_empty_people_tile (MnbPeoplePanel *people_panel)
                                       NULL);
 
   picture = clutter_texture_new_from_file (PLACEHOLDER_IMAGE, NULL);
-
-  mx_table_add_actor_with_properties (MX_TABLE (tile),
+  if (picture)
+    mx_table_add_actor_with_properties (MX_TABLE (tile),
                                       picture,
                                       3, 0,
                                       "x-expand", TRUE,
@@ -299,8 +299,9 @@ _make_empty_people_tile (MnbPeoplePanel *people_panel)
                                       "x-align", MX_ALIGN_END,
                                       "y-align", MX_ALIGN_END,
                                       NULL);
-
-
+ 
+    else
+	g_warning("no people.png in %s", THEMEDIR);
 
   return tile;
 }

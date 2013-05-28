@@ -28,7 +28,7 @@
 #include <meego-panel/mpl-panel-common.h>
 #include "mnb-people-panel.h"
 
-#include <config.h>
+//#include <config.h>
 
 static void
 _client_set_size_cb (MplPanelClient *client,

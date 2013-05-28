@@ -1,4 +1,4 @@
 [D-BUS Service]
 Name=org.freedesktop.Telepathy.Client.MeegoPanelPeople
-Exec=@libexecdir@/meego-panel-people
+Exec=@PKG_LIBEXECDIR@/gogoo-panel-people
 
